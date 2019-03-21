@@ -1,5 +1,5 @@
 1) Créer jenkins container avec le map docker daemon
-	docker run -d -it --name jenkins-master -v /var/run/docker.sock:/var/run/docker.sock -p8080:8080 jenkins-master
+	docker run -d -it --name jenkins-master --privileged -v /usr/bin/docker:/usr/bin/docker -v /var/run/docker.sock:/var/run/docker.sock -p8080:8080 jenkins-master
 2) Récupérer la clé
 	docker cp jenkins-master:/var/jenkins_home/secrets/initialAdminPassword .
 3) Installer Jenkins avec OceanBlue
