@@ -1,0 +1,11 @@
+1) Créer jenkins container avec le map docker daemon
+	docker run -d -it --name jenkins-master -v /var/run/docker.sock:/var/run/docker.sock -p8080:8080 jenkins-master
+2) Récupérer la clé
+	docker cp jenkins-master:/var/jenkins_home/secrets/initialAdminPassword .
+3) Installer Jenkins avec OceanBlue
+4) Créer un repo git pour la pipeline avec un jenkinsfile : https://github.com/j0h3/pipeline_jenkins/blob/master/Jenkinsfile
+5) Créer sa pipeline sur jenkins en pointant sur le repo
+6) Créer un script python et un dockerfile sur la machine hébergeant docker -> https://github.com/j0h3/appli_python
+7) Builder l'image avec commande docker build -t <NOM_IMG> .
+8) Tester la pipeline
+9) Appeler john si ça va pas :)
