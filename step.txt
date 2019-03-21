@@ -8,4 +8,5 @@
 6) Créer un script python et un dockerfile sur la machine hébergeant docker -> https://github.com/j0h3/appli_python
 7) Builder l'image avec commande docker build -t <NOM_IMG> .
 8) Tester la pipeline
+8_bis) Ajouter un cloud Docker dans configuration unix:///var/run/docker.sock
 9) Appeler john si ça va pas :)
